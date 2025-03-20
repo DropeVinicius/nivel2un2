@@ -1,0 +1,2938 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <title>Nivelamento - Língua Portuguesa Nível 2 - Unidade 2</title>
+<style>
+    /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta rolagem horizontal */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #9F43BE;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #9f43be;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            z-index: 10; /* Garante que o menu esteja acima de outros elementos */
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #003974; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Para evitar que o pseudoelemento saia do container */
+            border-top: 3px solid #003974;
+            border-bottom: 3px solid #003974;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1741784872/xw24i9yzlzfsicthkntq.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Controle da opacidade */
+            z-index: -1; /* Coloca o background atrás do conteúdo */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #015A42; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Título da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f43be11;
+            padding: 20px;  
+        }
+
+        .secao1 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao1 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        .secao1 li{
+            font-size: 17px;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao1 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao1 p {
+                font-size: 1.2rem;
+            } 
+        }
+         /* Título da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;  
+        }
+
+        .secao2 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .secao2 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao2 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao2 p {
+                font-size: 1.2rem;
+            } 
+        }
+                /* Container principal */
+        .container-box {
+            background-color: #fff; /* Fundo branco */
+            border: 2px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px; /* Cantos arredondados */
+            padding: 20px; /* Espaçamento interno */
+            width: 90%;
+            max-width: 800px; /* Limite de largura */
+            margin: 20px auto; /* Centralizar */
+        }
+        .container-box p {
+            margin: 0; /* Remove a margem herdada */
+            padding: 5px;
+            width: 100%; /* Faz o texto ocupar todo o espaço disponível */
+        }
+
+        /* Layout da imagem + texto */
+        .content {
+            display: flex;
+            align-items: stretch; /* Faz com que imagem e texto ocupem o mesmo espaço vertical */
+            justify-content: space-between;
+            gap: 20px; /* Espaço entre os elementos */
+        }
+
+        /* Imagem */
+        .content img {
+            width: 350px; /* Ajuste do tamanho da imagem */
+            height: auto;
+            border-radius: 5px; /* Pequeno arredondamento */
+            object-fit: cover; /* Garante que a imagem preencha seu espaço sem distorcer */
+        }
+
+        /* Texto */
+        .textimg {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+            flex: 1 !important; /* O texto ocupa o espaço restante */
+            text-align: justify;
+            height: 100%; /* Faz com que o bloco de texto tenha a mesma altura da imagem */
+        }
+
+        /* Descrição abaixo da imagem */
+        .description {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: justify; /* Melhor alinhamento */
+        }
+
+        /* 🔹 Responsividade 🔹 */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column !important; /* Empilha imagem e texto */
+                align-items: center;
+                text-align: center !important;
+            }
+
+            .container-box {
+                width: 85%; /* Reduz a largura em telas médias */
+                max-width: 400px; /* Define um limite para não ficar muito grande */
+            }
+
+            .content img {
+                width: 90% !important; /* Imagem mais responsiva */
+                max-width: 300px !important; /* Limite de tamanho */
+                margin-bottom: 10px !important; /* Espaço entre imagem e texto */
+            }
+
+            .textimg {
+                font-size: 14px !important; /* Texto reduzido */
+                text-align: justify !important; /* Melhor leitura */
+                display: block; /* Garante que o texto fique bem distribuído */
+            }
+            
+        }
+
+        @media (max-width: 480px) {
+            .container-box {
+                width: 80%; /* Ajuste para telas pequenas */
+                max-width: 400px; /* Reduz ainda mais em celulares menores */
+                padding: 15px; /* Ajusta o espaçamento interno */
+            }
+        }
+        /* Remove as bolinhas e mantém os números */
+        ul {
+            list-style: none; /* Remove os estilos de lista padrão */
+        }
+        /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 3px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px;
+            background-color: #fff;
+            margin: 20px auto;
+        }
+
+        /* Slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides */
+        .slide {
+            min-width: 100%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 40px 20px; /* Ajuste para telas menores */
+            box-sizing: border-box;
+            white-space: normal; /* Permite quebra de linha */
+            word-wrap: break-word; /* Quebra palavras longas */
+            overflow-wrap: break-word; /* Alternativa */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        /* Ajuste para responsividade */
+        @media (max-width: 768px) {
+            .slider-container {
+                width: 95%;
+            }
+
+            .slide {
+                font-size: 16px;
+                padding: 25px 30px; /* Aumenta o espaço interno */
+                min-height: 150px; /* Garante que todos os slides tenham espaço suficiente */
+                overflow: hidden;
+            }
+
+            .arrow {
+                font-size: 30px;
+            }
+
+            .left-arrow {
+                left: -5px;
+            }
+
+            .right-arrow {
+                right: -5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider-container {
+                width: 100%;
+            }
+
+            .slide {
+                font-size: 14px;
+                padding: 20px 35px; /* Mais espaço para texto */
+                min-height: 160px; /* Mais altura mínima */
+            }
+
+            .arrow {
+                font-size: 25px;
+            }
+
+            .left-arrow {
+                left: -8px;
+            }
+
+            .right-arrow {
+                right: -8px;
+            }
+        }
+        /* Setas */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9F43BE; /* Cor violeta */
+            font-size: 40px; /* Tamanho da seta */
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .arrow:hover {
+            color: #7c34a1; /* Cor mais escura ao passar o mouse */
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+        .slide strong {
+            margin-right: 5px; /* Ajuste conforme necessário */
+        }
+        /* Contêiner dos flip cards */
+        .flip-card-container {
+            display: flex;
+            gap: 10px; /* Espaçamento entre os cards */
+            justify-content: center;
+            margin: 20px auto;
+            padding-bottom: 20px; /* Garante que o espaçamento inferior seja visível */
+        }
+
+        /* Estilo geral do flip card */
+        .flip-card {
+            width: 180px;
+            height: 180px;
+            perspective: 1000px; /* Adiciona a perspectiva 3D */
+            margin: 10px;
+        }
+
+        /* Parte interna do flip card */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        /* Front e Back dos cards */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #9F43BE;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Face da frente */
+        .flip-card-front {
+            background-color: #9F43BE;
+            color: white;
+    
+        }
+
+        /* Face de trás */
+        .flip-card-back {
+            background-color: white;
+            color: #9F43BE;
+            transform: rotateY(180deg);
+            font-size: 12px;
+        }
+        
+
+        /* Efeito de rotação ao passar o mouse */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+       @media (max-width: 768px) {
+        .flip-card-containerg {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .flip-cardg {
+            width: 45%; /* Cada card ocupa 45% da largura, cabendo dois por linha */
+            max-width: 160px; /* Mantém um limite de tamanho */
+            margin: 5px;
+        }
+        .flip-card-frontg,
+        .flip-card-backg {
+            font-size: 12px; /* Reduz o tamanho do texto */
+            padding: 8px; /* Ajusta o espaçamento interno */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .flip-card-container {
+            flex-wrap: wrap; /* Permite que os cards quebrem linha */
+            justify-content: center; /* Centraliza os itens */
+            gap: 15px; /* Aumenta o espaçamento entre os cards */
+        }
+
+        .flip-card {
+            width: 150px; /* Reduz a largura do card */
+            height: 160px; /* Reduz a altura do card */
+            margin: 5px; /* Ajusta as margens */
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            font-size: 11px; /* Reduz o tamanho do texto */
+            padding: 8px; /* Ajusta o espaçamento interno */
+            
+        }
+    }
+    /* Estilo para os tópicos de texto */
+        .topico-texto {
+            width: 100%;
+        }
+
+        .topico-texto p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+
+        .topico-texto ul {
+            list-style: none; /* Remove marcadores padrão */            
+        }
+
+        .topico-texto ul li {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: flex-start; /* Alinha o texto com o ícone */
+            white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+        }
+        .topico-destaque {
+            font-size: 18px; /* Aumente o tamanho conforme a necessidade */
+            font-weight: 400;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .topico-texto {
+                padding: 15px;
+            }
+
+            .topico-texto p {
+                font-size: 16px;
+            }
+
+            .topico-texto ul li {
+                font-size: 18px;
+            }
+        }
+        /* Acordeon styles */
+        .acordeon-container {
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        .acordeon {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .acordeon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #9F43BE;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-content {
+            display: none;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #9F43BE;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-content p {
+            margin: 20px;
+        }
+
+            /* Estilo do ícone da seta */
+        .acordeon-icon {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Para rotação suave */
+        }
+
+            /* Rotação da seta para cima */
+        .acordeon-header.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .acordeon-header {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+        }
+        /* Responsividade para telas menores ainda (480px) */
+        @media (max-width: 480px) {
+            .acordeon-header {
+                font-size: 19px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+        }
+            /* Acordeon styles FIM */
+            .small-frame {
+            border: 2px solid #9F43BE;
+            border-radius: 10px;
+            width: 80%; /* Usa um tamanho mais fluido */
+            max-width: 700px;
+            background-color: #FFF;
+            height: auto;
+            margin: 20px auto; /* Centraliza e ajusta margem superior */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
+
+        .small-frame p {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.8; /* Maior espaçamento entre linhas */
+            text-align: justify;
+            margin: 20px auto;
+        }
+        .small-frame h4{
+            text-align: center;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frame {
+                width: 90%; /* Mais largura para ocupar melhor a tela */
+                padding: 15px;
+            }
+
+            .small-frame p {
+                font-size: 14px; /* Mantém boa leitura */
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frame {
+                width: 95%; /* Usa quase toda a tela para não ficar apertado */
+                padding: 10px;
+            }
+
+            .small-frame p {
+                font-size: 13px; /* Mantém o texto confortável */
+                line-height: 1.6;
+            }
+        }
+        .small-frameg {
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            width: 80%; /* Usa 90% da largura do contêiner */
+            max-width: 700px; /* Define limite máximo */
+            background-color: #FFF;
+            height: auto;
+            margin: 20px auto; /* Centraliza e ajusta margem superior */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
+
+        .small-frameg p {
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.8;
+            text-align: justify;
+            margin: 20px auto;
+        }
+
+        .small-frameg h4{
+            text-align: center;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif;
+        }
+                /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frameg {
+                width: 90%; /* Mais largura para ocupar melhor a tela */
+                padding: 15px;
+            }
+
+            .small-frameg p {
+                font-size: 14px; /* Mantém boa leitura */
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frameg {
+                width: 95%; /* Usa quase toda a tela para não ficar apertado */
+                padding: 10px;
+            }
+
+            .small-frameg p {
+                font-size: 13px; /* Mantém o texto confortável */
+                line-height: 1.6;
+            }
+        }
+        .text-right {
+            display: inline-block; /* Evita que a span force um bloco separado */
+            text-align: right;
+            width: auto;
+        }
+        .small-frame p:last-child {
+            text-align: right;
+            font-style: italic;
+        }
+        .text-blue {
+            color: #0070c0; /* Altera a cor do texto */
+            font-weight: bold;
+        }
+        .text-green{
+            color: #015A42;
+        }
+        .text-greenv{
+            color: #538135;
+            font-weight: bold;
+        }
+
+        .text-italic {
+            font-style: italic; /* Transforma o texto em itálico */
+        }
+        .text-italicf {
+            font-style: italic; /* Transforma o texto em itálico */
+            font-size: 14px;
+        }
+        .text-red{
+            color: red;
+            font-weight: bold;
+        }
+        /* Retângulo de fundo */
+        .background-section {
+            background-color: #015A42; /* Cor de fundo verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            min-height: 350px; /* Altura mínima */
+            width: 90%; /* Largura ajustada à estrutura */
+            max-width: 800px; /* Limite máximo */
+            height: auto; /* Altura do retângulo */
+            margin: 50px auto; /* Espaçamento da seção acima e centralização */
+            position: relative; /* Define o contexto de empilhamento */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .background-section {
+                width: 95%; /* Ajusta a largura */
+                margin: 50px auto; /* Ajuste de margem */
+            }
+        }
+        
+        /* Retângulo transparente (sobreposição) */
+        .transparent-section {
+            background-color: rgba(255, 255, 255, 0.822); /* Tom verde com transparência */
+            border: 2px solid #015A42; /* Borda sólida verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            width: calc(100% - 40px); /* Reduz tamanho para acomodar margens */
+            height: 100%;
+            position: absolute; /* Define posicionamento relativo */
+            top: 20px;
+            left: 20px; 
+            z-index: 1; /* Garante que o retângulo fique sobre o fundo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+            display: flex; /* Usamos flexbox para alinhar o conteúdo */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            justify-content: space-evenly; /* Distribui espaço uniformemente */
+            align-items: center; /* Alinha o conteúdo à esquerda */
+            text-align: center; /* Centraliza o texto */
+        }
+        
+        
+                /* Responsividade - Ajuste da largura da transparent-section para telas menores */
+        @media (max-width: 768px) {
+            .transparent-section {
+                width: 90%; /* Diminui a largura da sobreposição */
+                left: 5%; /* Ajusta o posicionamento para centralizar */
+                right: 5%; /* Garante que o elemento ocupe menos espaço na tela */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        /* Círculo verde */
+        .circle-green {
+            position: absolute;
+            top: -30px; /* Distância do topo */
+            left: -30px; /* Distância da esquerda */
+            background-color: #015A42; /* Cor verde */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo */
+            height: 120px; /* Tamanho do círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Garantir que fique sobre o fundo */
+        }
+
+        /* Círculo branco sobre o verde */
+        .circle-white {
+            position: absolute;
+            top: -4px; /* Eleva o círculo branco para cima */
+            left: -5px; /* Centraliza o círculo branco sobre o verde */
+            background-color: white; /* Cor branca */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo branco */
+            height: 120px; /* Tamanho do círculo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; /* Coloca o círculo branco sobre o verde */
+        }
+
+        /* Estilizando o ícone dentro do círculo branco */
+        .circle-white i {
+            font-size: 80px; /* Tamanho do ícone */
+            color: #015A42; /* Cor verde para o ícone */
+        }
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .circle-green, .circle-white {
+                width: 60px; /* Diminui o tamanho */
+                height: 60px; /* Diminui o tamanho */
+                top: -5px; /* Ajusta o posicionamento */
+                left: -5px; /* Ajusta o posicionamento */
+            }
+
+            .circle-white i {
+                font-size: 40px; /* Reduz o ícone */
+            }
+        }
+        .learn-more-title {
+            color: #015A42; /* Cor verde */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            text-align: left;
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            margin: -25px 0;
+            width: 80%; /* Ocupa toda a largura disponível */
+        }
+        .learn-more-paragraph {
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.4; /* Espaçamento entre linhas */
+            color: #000; /* Cor verde */
+            margin: -15px 0; /* Reduz margens */
+            width: 90%; /* Ocupa toda a largura disponível */
+            word-wrap: break-word;
+        }
+        .centered-paragraph {
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: -5px 0; /* Ajusta a margem para uniformidade */
+            font-size: 17px; /* Mantém o tamanho consistente */
+            line-height: 1.4; /* Controla o espaçamento entre linhas */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .learn-more-title {
+                font-size: 30px; /* Ajusta o tamanho do título */
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .learn-more-paragraph {
+                font-size: 15px; /* Ajusta o tamanho do texto */
+                line-height: 1.4;
+                text-align: justify; /* Centraliza o texto */
+                margin: 5px 0; /* Reduz margens */
+            }
+        }
+            .outer-background {
+                padding: 10px;
+                background-color: #9f43be11; /* Cor de fundo para o contêiner externo */
+        }
+        .play-icon {
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center;
+            align-items: center;
+            background-color: #015A42; /* Fundo verde */
+            color: #FFF; /* Ícone branco */
+            width: 90px; /* Largura do botão */
+            height: 55px; /* Altura do botão */
+            border-radius: 13px;
+            font-size: 40px; /* Tamanho do ícone */
+            cursor: pointer; /* Cursor de clique */
+            transition: transform 0.3s ease; /* Efeito de transição */
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1); /* Aumenta levemente no hover */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .play-icon {
+                width: 60px; /* Diminui a largura */
+                height: 40px; /* Diminui a altura */
+                font-size: 25px; /* Diminui o tamanho do ícone */
+            }
+        }
+        /* Modal - Oculto por padrão */
+        .video-modal {
+            display: none; /* Inicialmente o modal está oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+            z-index: 1000; /* Garantir que o modal fique acima de outros conteúdos */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo do modal (onde ficará o vídeo) */
+        .video-content {
+            position: relative;
+            background-color: #015A42;
+            border-radius: 10px;
+            padding: 20px;
+        }
+         
+        /* Responsividade - Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .video-content {
+                max-width: 100%; /* Maximize a largura do modal no mobile */
+                padding: 10px;
+            }
+
+            .video-content iframe {
+                width: 100%; /* O iframe ocupará toda a largura disponível */
+                height: 56.25vw; /* Isso mantém a proporção de 16:9 */
+                max-height: 80vh; /* Evita que o vídeo ultrapasse a tela */
+                border-radius: 10px;
+            }
+        }
+
+        /* Botão de fechar */
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 40px;
+            color: #FFF;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .close-btn:hover {
+            transform: scale(1.2); /* Aumenta levemente no hover */
+            color: #FF0000; /* Muda a cor para vermelho no hover */
+        }
+        /* Container dos novos accordions */
+        .accordion-container-diferente {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo do accordion */
+        .accordion-diferente {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        /* Cabeçalho do accordion */
+        .accordion-header-diferente {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            background-color: #015A42; /* Cor de fundo exclusiva */
+            color: #fff; /* Cor do texto */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Ícone no cabeçalho */
+        .accordion-icon-diferente {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Transição para rotação */
+        }
+
+        /* Conteúdo do accordion */
+        .accordion-content-diferente {
+            display: none;
+            padding-top: 0;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333; /* Cor do texto */
+            background-color: #FFF; /* Fundo mais claro */
+            border: 2px solid #015A42; /* Cor da borda combinando */
+            border-radius: 0 0 10px 10px; /* Apenas cantos inferiores arredondados */
+        }
+
+        .accordion-content-diferente p {
+            margin: 20px;
+            max-width: 800px;
+            font-size: 16px;
+        }
+        @media (max-width: 480px) {
+        .accordion-content-diferente p {
+            font-size: 16px;
+            margin: 10px;
+            }
+        }
+
+        /* Rotação do ícone */
+        .accordion-header-diferente.active .accordion-icon-diferente {
+            transform: rotate(180deg);
+        }
+        /* Tabs container */
+        .tabs-container2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: calc(90% - 10px); /* Subtrai o gap total da largura */
+            max-width: 800px; /* Limite máximo */
+            font-weight: bold;
+            border-radius: 10px;
+            gap: 10px;
+            padding: 5px;
+            box-sizing: border-box; /* Garante que padding e largura sejam incluídos no cálculo */
+        }
+
+        .tab2{
+            flex-grow: 1;  /* Impede que as abas cresçam para ocupar todo o espaço */
+            display: flex;
+            align-items: center; /* Centraliza verticalmente o conteúdo e o ícone */
+            justify-content: space-between; /* Texto à esquerda e ícone à direita */
+            text-align: center;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+            border-radius: 10px; /* Para suavizar as bordas dos Tabs */
+            background-color: #015A42; /* Cor de fundo violeta para os tabs */
+        }
+                /* Ajustes do ícone no tab */
+        /* Ícone no final do Tab */
+        .icon-wrapper {
+            margin-left: auto; /* Garante que o ícone vá para o fim do tab */
+        }
+
+        .tab2 i {
+            font-size: 18px;
+            color: #ffffff; /* Cor padrão do ícone */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .tab2:hover i {
+            color: #04fcba; /* Altera a cor no hover */ 
+            transform: scale(1.2); /* Amplia o ícone no hover */
+        }
+        @media (max-width: 480px) {
+            .tab2 i {
+                font-size: 16px; /* Ícone menor para mobile */
+            }
+        }
+        .tab2:hover {
+            background-color: #015A42; /* Cor mais escura ao passar o mouse */
+        }
+
+        /* Estilo para o conteúdo dos Tabs */ 
+        .tab-content2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            background-color: #FFF;
+            display: none; /* Inicialmente escondido */
+            box-sizing: border-box; /* Inclui bordas e padding no cálculo de largura */
+            width: 90%; /* Consistência com outras seções */
+            max-width: 800px; /* Limite máximo */
+            margin-left: auto; /* Centraliza horizontalmente */
+            margin-right: auto; /* Centraliza horizontalmente */
+            height: auto;
+        }
+
+        /* Tab ativo */
+        .tab2.active {
+            background-color: #015a4283; /* Cor mais escura para indicar o ativo */
+            color: #FFFFFF; /* Mantém o texto em branco */
+            font-weight: bold; /* Destaca o texto */
+        }
+        /* Quadro com borda violeta */
+        .quadrov {
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 20px; /* Espaçamento interno */
+            background-color: #fff; /* Fundo branco */
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Largura máxima */
+            margin: 10px auto;
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-top: 50px;
+        }
+
+        /* Imagem dentro do quadro */
+        .imagem-quadrov {
+            width: 100%; /* Imagem ocupa toda a largura disponível */
+            max-width: 700px; /* Limite máximo da largura */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 15px;
+        }
+
+        /* Fonte da imagem */
+        .fonte-quadrov {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #555; /* Cinza escuro */
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+                /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadrov {
+                padding: 15px;
+            }
+
+            .titulo-quadrov {
+                font-size: 20px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadrov {
+                padding: 10px;
+            }
+
+            .titulo-quadrov {
+                font-size: 18px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 12px;
+            }
+        }
+        /* Conteúdo da Conclusão */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #E2F4EB; /* Fundo neutro */
+        }
+
+        .conclusao .titulo-conclusao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+        .conclusao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            width: 100%;
+            max-width: 800px;
+        }
+        .conclusao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            } 
+        }
+        /* Conteúdo da Introdução */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background-color: #FFF; /* Fundo neutro */
+            border-top: 5px solid #015A42;
+        }
+
+        .referencias .titulo-referencias {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .referencias .caixa-texto {
+            background-color: #FFF; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+            overflow-wrap: break-word; /* Quebra de palavras longas */
+        }
+
+        .referencias .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .referencias .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+        .referencias .caixa-texto, .conclusao .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+                /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .referencias .titulo-referencias {
+                font-size: 50px; /* Ajuste do tamanho da fonte */
+            }
+
+            .referencias .caixa-texto {
+                padding: 15px; /* Menos padding */
+                max-width: 90%; /* Ajusta o tamanho da caixa no tablet */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .titulo-referencias {
+                font-size: 2.8rem; /* Menor tamanho da fonte no mobile */
+            }
+
+            .referencias .caixa-texto {
+                max-width: 95%; /* Ajusta ainda mais o tamanho da caixa */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+            }
+        }
+
+        
+        /* Estilização do rodapé */
+        .footer {
+            border-top: 5px solid #015A42; /* Borda superior */
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color: #9F43BE;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #7D3598;
+            }
+</style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1iZTd5_tOqqVTFtrgbqdKazN1J1Yk-PuE" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao22">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#secao4">Tópico 4</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Título -->
+    <section id="titulo" class="titulo-intro">
+        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+    </section>
+    
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 2</h1>
+            <h2 class="subtitulo-professor">PROFª VALÉRIA SILVA ROSA DE ALMEIDA</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 2 | A PRODUÇÃO DE RESUMO ACADÊMICO</h1>
+        </div>
+    
+        <!-- Conteúdo -->
+        <div class="conteudo-introducao">
+            <div class="caixa-texto">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <p>Olá estudante!</p>
+                <p>Nesta unidade, você aprenderá sobre a produção de resumos acadêmicos, uma habilidade essencial para
+                a vida universitária. Resumir é sintetizar as informações mais importantes de um texto de forma clara,
+                objetiva e organizada, sem perder a fidelidade ao conteúdo original. A prática do resumo contribui para a
+                compreensão dos temas estudados, auxiliando tanto no aprendizado quanto na revisão de conteúdos.</p>
+                <p>Ao longo desta unidade, serão apresentadas estratégias para identificar as ideias principais de um texto,
+                diferenciar informações essenciais de secundárias e construir um resumo coeso e coerente, utilizando a
+                norma-padrão da Língua Portuguesa.</p>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <h1>1. O RESUMO</h1>
+        <p>
+            Resumo é uma forma reduzida, concisa e seletiva de informação de um determinado conteúdo, parte
+            essencial de um tema. Resumir é apresentar uma <strong>condensação fiel</strong> das ideias contidas em um texto,
+            resultado de um processo <strong>de compreensão efetiva da informação pela pessoa</strong>, exposta ao assunto.
+            Se alguém consegue resumir um evento que presenciou, uma festa que compareceu, um filme a que
+            assistiu, um livro que leu, pode, por meio do resumo, mostrar que entendeu tudo o que viu, ouviu ou leu.
+            <strong>Só é possível resumir aquilo que entendemos.</strong>
+        </p>
+        <div class="container-box">
+            <div class="content">
+                <p class="textimg">
+                    <strong>O resumo é um gênero bastante utilizado no meio acadêmico</strong> e, por isso, saber produzir um bom resumo é
+                    fundamental. Ao estudar para uma prova teórica em que algumas questões devem
+                    ser respondidas, você estará resumindo o conteúdo que o professor passou, seja
+                    em aulas teóricas ou em capítulos, livros que este pediu para ler.
+                </p>
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1741719325/xt5oo9eyduzavidwqig3.jpg"
+                    alt="Imagem representativa">
+            </div>
+            <p><span class="description"><strong>Descrição da imagem:</strong> A imagem mostra uma jovem de cabelos escuros,
+                    blusa azul, estudando em um ambiente
+                    iluminado, sentada em uma mesa com diversos livros coloridos empilhados ao lado. Ela está concentrada
+                    escrevendo em um caderno aberto, usando uma caneta verde. Na mesa, há também um teclado de computador,
+                    um mouse e uma calculadora.</span>
+            </p>
+            <p><span class="description"><strong>Fonte:</strong> 123RF</span></p>
+        </div>
+        <p>
+            O resumo permitirá a você perceber se compreendeu o que foi lido, pois irá recuperar as ideias, conceitos,
+            informações de todo o conteúdo que deverá lidar ao longo do curso escolhido por você. Ao sintetizar as
+            ideias principais, o resumo deve ser bem estruturado, produzindo-o com suas <strong>próprias palavras</strong>, usando
+            a <strong>norma-padrão da Língua Portuguesa</strong>, sem frases soltas, com coesão e coerência. Lembre-se de usar
+            os organizadores textuais para ajudar você a construir um resumo com coesão, coerência e progressão
+            de ideias lógicas, claras e concisas, relacionando-as entre si.
+        </p>
+        <p>
+            Portanto, resumir um texto significa reduzi-lo ao seu esqueleto essencial sem perder de vista alguns
+            elementos, a fim de facilitar seu estudo nas diferentes disciplinas de seu curso, como:
+        </p>
+        <ul>
+            <li><strong>1.</strong> Identificar cada uma das partes essenciais (centrais, principais) do texto, deixando de lado as secundárias;
+            </li>
+            <li><strong>2.</strong> Diferenciar o principal do secundário;</li>
+            <li><strong>3.</strong> Manter a progressão em que as ideias do texto se sucedem, usando os organizadores textuais;</li>
+            <li><strong>4.</strong> Obedecer a ligação que o texto estabelece entre cada uma de suas partes;</li>
+            <li><strong>5.</strong> Ser breve e conciso sem reduzir excessivamente o conjunto de ideias;</li>
+            <li><strong>6.</strong> Não acrescentar exemplos, percentagens, isto é, dados secundários, detalhes.</li>
+            <li><strong>7.</strong> Usar linguagem própria e compreensível.</li>
+        </ul>
+        <p>
+            O resumo trata de um processo de retirada das ideias de uma determinada leitura, expondo, em poucas
+            palavras, o que o autor expressou de uma forma mais objetiva. O <strong>resumo não</strong> é um comentário crítico,
+            pessoal, opinativo. As ideias de um resumo devem ser fiéis àquelas expostas no texto original, <strong>sem
+            copiá-las</strong>. Um dos objetivos essenciais é instrumentalizar o resumo a fim de que você consiga, ao lê-lo,
+            <strong>assimilar, absorver aquilo que é realmente fundamental.</strong>
+        </p>
+        <p>
+            Navegue nas setas, a seguir, para conferir como preservar as partes essenciais do texto original.
+        </p>
+    <div class="slider-container">
+        <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide()"></i>
+        <div class="slider">
+            <div class="slide"><strong>a. </strong>tomar cada parágrafo isoladamente;
+            </div>
+            <div class="slide"><strong>b. </strong>encontrar a ideia-tópico de cada parágrafo;
+            </div>
+            <div class="slide"><strong>c. </strong>selecionar as melhores palavras-chave;
+            </div>
+            <div class="slide"><strong>d. </strong>eliminar exemplos, ilustrações e retomadas.
+            </div>
+        </div>
+        <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide()"></i>
+    </div>
+    <p>
+        Enfim, <strong>o resumo é uma redução do texto original, procurando captar suas ideias essenciais, na
+        progressão e no encadeamento em que aparecem no texto.</strong> É uma apresentação breve, concisa e seletiva
+        de um texto, é fiel ao pensamento do autor, obedecendo a sequência lógica do texto. <strong>O resumo deve ser
+        iniciado após uma 2ª. leitura. Não é possível ir resumindo à medida que se vai fazendo a 1ª. leitura.</strong>
+    </p>
+    <p>
+        Quem resume deve exprimir, <strong>em estilo objetivo,</strong> os elementos essenciais do texto. Por isso, <strong>não cabem, num
+        resumo, comentários ou julgamentos do produtor.</strong> Muitas pessoas julgam que resumir é reproduzir, copiar
+        frases ou partes de frases do texto original, construindo uma espécie de “colagem”, “uma colcha de retalhos”.
+        Essa “colagem” de fragmentos do texto original não é um resumo. Ela atesta que o texto não foi compreendido.
+    </p>
+    <p>
+        Para elaborar um bom resumo, é necessário compreender antes o conteúdo global do texto. É evidente que
+        o grau de dificuldade para resumir um texto depende basicamente de três fatores, que podem ser observados
+        nos cartões a seguir.
+    </p>
+    <div class="flip-card-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3>
+                        1.<br><br> Da complexidade do próprio texto
+                    </h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3>
+                        (seu vocabulário, sua linguagem e o tipo do assunto tratado);
+                    </h3>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3>
+                        2.<br><br> Da complexidade do tema
+                    </h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3>
+                        (conhecimento prévio do assunto, suas relações lógicas);
+                    </h3>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3>
+                        3.<br><br> Da competência do leitor
+                    </h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3>
+                        (seu grau de amadurecimento intelectual, sua experiência de leitura, o repertório de informações que possui, habilidades
+                        com a linguagem, capacidade interpretativa e analítica).
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        <strong>Atenção especial deve ser dada à memória, pois como ela é seletiva,</strong> você pode apegar-se a aspectos
+        de informação que lhe chamam mais a atenção, mas que, às vezes, não são os mais relevantes para
+        se desenvolver, e, por esse motivo, desligar-se de outros aspectos mais relevantes, imprescindíveis à
+        compreensão do texto.
+    </p>
+    <p>
+        Para o <strong>aluno</strong>, o resumo é uma estratégia de estudo e, para o <strong>professor,</strong> um instrumento completo de
+        verificação da aprendizagem, pois permite que sejam trabalhadas, a um só tempo, as <strong>habilidades de ler
+        e escrever.</strong>
+    </p>
+    <p>
+        Assim, trataremos de <strong>dois aspectos:</strong>
+    </p>
+    <!-- Acordeons -->
+    <div class="acordeon-container">
+        <!-- Primeiro acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                1. Do processo de sumarização do texto lido
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+    
+            <div class="acordeon-content">
+                <p>
+                    Oferecendo de um lado, algumas indicações que possam facilitar a leitura e retenção da informação apreendida, e, de
+                    outro, apontando alguns fatores que podem interferir no processo de leitura e, como resultado, atrapalhar a compreensão
+                    do texto lido;
+                </p>
+            </div>
+        </div>
+    
+        <!-- Segundo acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                2. Da produção do resumo
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+            <div class="acordeon-content">
+                <p>
+                    A partir de sugestões que possam orientar o escritor (nesse caso é <strong>você</strong>) a organizar bem o seu resumo, registrando as
+                    informações apreendidas pela leitura organizada.
+                </p>
+            </div>
+        </div>
+    </div>
+    <h1>
+        1.1 ESTRATÉGIAS PARA O RESUMO DE UM TEXTO
+    </h1>
+    <p>
+        As estratégias para a produção de um texto podem ser divididas em dois tipos principais: seleção e
+        construção.
+    </p>
+    <p>
+        A estratégia de seleção envolve a manutenção dos conteúdos mais relevantes e a eliminação daqueles
+        que são irrelevantes. Esse processo ocorre por meio de duas operações fundamentais: a manutenção, que
+        preserva as informações primárias essenciais ao desenvolvimento do texto, e o apagamento, que consiste
+        na eliminação de informações secundárias que não contribuem diretamente para a argumentação.
+    </p>
+    <p>
+        Já a estratégia de construção consiste na substituição de uma sequência de informações por outra
+        mais adequada ao contexto. Essa substituição pode ocorrer de duas formas: por generalização, quando
+        informações particulares são substituídas por conceitos mais amplos e abrangentes, e por associação de
+        significados, quando novas informações são construídas a partir da relação entre diferentes conceitos,
+        promovendo uma compreensão mais profunda do tema abordado.
+    </p>
+    <div class="topico-texto">
+        <ul>
+            <li><span class="topico-destaque"><strong>▸ ESTRATÉGIA DE SELEÇÃO - Exemplo</strong></span></li>
+        </ul>
+    </div>
+    <div class="small-frame">
+        <p>
+            A esse respeito, <strong>a campanha do desarmamento,</strong> que recolheu mais de meio milhão de armas, já
+            <strong>produziu importantes resultados. O Ministério da Saúde informa que os homicídios</strong> por armas
+            de fogo caíram 8,2% em 2004 em relação a 2003. Foram de 39.325 assassinatos em 2003 para
+            36.091 no ano seguinte. É a primeira queda nesse indicador desde 1992.
+        </p>
+        <p><span class="text-right">(Extraído de: Editorial da Folha de S.Paulo, 09 de outubro de 2005.)</span></p>
+    </div>
+    <p>
+        Veja que a eliminação de algumas ideias não prejudicou a informação fundamental. Vale ressaltar que o
+        escritor precisará fazer adaptações linguísticas do texto original no resumo, especialmente em relação à
+        ligação das frases e parágrafos (<strong>uso de organizadores textuais</strong>).
+    </p>
+    <div class="topico-texto">
+        <ul>
+            <li><span class="topico-destaque"><strong>▸ ESTRATÉGIAS DE CONSTRUÇÃO E GENERALIZAÇÃO - Exemplo</strong></span></li>
+        </ul>
+    </div>
+    <div class="small-frame">
+        <p><strong>Texto original</strong> - <span class="text-blue">Águas de Minas</span></p>
+        <p><span class="text-italic">
+            Água mole em pedra dura tanto bate até que fura. Exemplo monumental dessa proeza é <strong>a Ponte
+            de Pedra</strong>, um túnel natural de 25 m de circunferência, arquitetado lenta e insistentemente ao longo
+            de milhares de anos pela correnteza rasa do <strong>rio do Salto</strong>.
+            </span>
+        </p>
+        <p><span class="text-italic">
+            <strong>A água</strong>, de tons variados, do mel ao avermelhado,<strong> não dá trégua no Parque Estadual do
+            Ibitipoca. Todos os caminhos levam a ela.</strong> E <strong>onde há água se esbanja vida</strong>: em seus 1.488
+            hectares existem cerca de 70 <strong>grutas</strong> e 40 <strong>cachoeiras</strong>, inúmeros <strong>paredões</strong> numa área de transição
+            de <strong>mata atlântica</strong> para <strong>cerrado</strong> que lhe permite abrigar uma pródiga <strong>biodiversidade.</strong> São cerca
+            de 900 espécies de <strong>plantas,</strong> algumas carnívoras, 210 tipos de <strong>aves</strong>, 17 endêmicas. Entre os 20
+            <strong>mamíferos</strong>, lobo-guará, jaguatirica, macaco e até onça-parda.
+            </span>
+        </p>
+    </div>
+    </section>
+    <section id="secao2" class="secao2">
+        <p>
+            Verifique o texto <strong>resumido</strong>, aplicando as estratégias de construção e generalização: 
+        </p>
+        <div class="small-frameg">
+            <p>
+                A ponte de Pedra é um túnel natural sobre o rio do Salto. A água do rio, localizado no Parque
+                Estadual do Ibitipoca, é abundante e fácil de ser encontrada. Observa-se que, onde há água, há
+                vida: em mais de mil hectares existem grutas, cachoeiras, paredões e a vegetação mista, mata
+                atlântica e cerrado e abriga a biodiversidade local: plantas, aves e mamíferos.
+            </p>
+        </div>
+        <p>
+            Percebam que algumas palavras foram acrescentadas para dar coesão ao resumo.
+        </p>
+    </section>
+    <!-- Seção Saiba Mais - Retângulo de Fundo -->
+    <section class="background-section">
+        <!-- Círculo Verde -->
+        <div class="circle-green">
+            <!-- Círculo Branco com ícone -->
+            <div class="circle-white">
+                <i class='bx bx-book-reader'></i>
+            </div>
+        </div>
+        <div class="transparent-section">
+            <h1 class="learn-more-title">SAIBA MAIS</h1>
+            <p class="learn-more-paragraph">
+                <strong>Aprenda a fazer resumos eficientes para otimizar seus estudos!</strong><br><br>
+                Neste vídeo, você descobrirá estratégias essenciais para elaborar resumos
+                organizados e objetivos, facilitando a retenção de informações e a preparação para
+                provas e trabalhos acadêmicos.
+            </p>
+            <!-- Ícone de Play -->
+            <div class="play-icon" data-video="https://www.youtube.com/embed/sU-3c0sk54Y?si=luTij3-1MQVh1aNL"
+                onclick="openVideoModal(this)">
+                <i class='bx bx-play-circle'></i>
+            </div>
+        </div>
+        <!-- Modal com o vídeo -->
+        <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+            <div class="video-content" onclick="event.stopPropagation()">
+                <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section id="secao22" class="secao2">
+        <h1>
+            2. IDEIAS PRIMÁRIAS E SECUNDÁRIAS
+        </h1>
+        <p>
+            A fim de melhor compreendermos as ideias primárias (principais) e secundárias de um texto, primeiramente
+            vamos ler o artigo <strong>A ERA DO ROBÔ,</strong> escrito por Stephen Kanitz.
+        </p>
+        <div class="small-frameg">
+            <h4>A ERA DO ROBÔ</h4>
+            <p>
+                Se você não lê ficção científica, pergunte a seu filho como será o mundo no final
+                do próximo século. Ele dirá que os robôs farão praticamente tudo. Haverá robô
+                para limpar a casa, buscar comida no supermercado, entregar cartas. Daqui a 100
+                anos, as máquinas farão tudo para nós e ninguém terá de trabalhar. Estaremos
+                todos em férias. Há quem diga que será um horror. Já imaginou todo mundo sem
+                nada para fazer? A maioria das pessoas já ouviu dizer que, após seis meses,
+                todo aposentado sobe pelas paredes e implora para voltar ao trabalho. É uma
+                mentira. Para quem se prepara corretamente, a aposentadoria é uma delícia.
+            </p>
+            <p>
+                Com os robôs suprindo nossas necessidades, poderemos nos devotar a
+                atividades muito mais interessantes. São 72.000 livros publicados a cada
+                ano para ser lidos. Mais de um milhão de sites interessantes para pesquisar,
+                8.000 cursos diferentes em que ingressar. Isso sem falar do edificante trabalho
+                comunitário e voluntário. O grande problema da humanidade não será a vida
+                sem trabalho. Será a transição da era atual para a era do robô. Transição
+                essa que já está em curso. De agora em diante, robô fabricará robô. Em
+                algum momento do futuro, metade da população terá trabalho.
+            </p>
+            <p>
+                A outra metade, não. Se essa transição ocorresse em poucos dias, tudo bem.
+                Acontece que ela demorará décadas.
+            </p>
+            <p>
+                Os americanos, por exemplo, ano após ano, trabalham seis horas a mais
+                em relação ao ano anterior. Deveriam trabalhar cada vez menos. Como não
+                fazem isso, os robôs e as tecnologias, em vez de reduzir o trabalho americano,
+                acabam desempregando brasileiros.
+            </p>
+            <p>
+                O problema do mundo não é econômico, é de estilo de vida. Precisamos encontrar
+                um jeito de convencer os povos dos países desenvolvidos a relaxar, a curtir a vida.
+                Poderíamos, por exemplo, mandar fazer uns adesivos para os carros deles com
+                frases como “Take it easy” (Vá com calma), “Carpe diem” (Aproveite o dia), “Relax”.
+                Povos como os americanos e japoneses precisam aprender a trabalhar menos, a
+                cuidar mais de suas famílias e a tirar férias (de preferência em praias brasileiras).
+            </p>
+            <p>
+                Tem gente que acha o máximo tudo que vem dos Estados Unidos. Eu acho o
+                máximo que o brasileiro ponha a família em primeiro lugar. Que o Brasil tire férias
+                em dezembro e só retome o ritmo depois do Carnaval. Que o país inteiro pare
+                durante a Copa do Mundo. Que toda criança saiba dançar e batucar. Estamos
+                mais bem preparados para a era do robô do que os anglo-saxões e os orientais.
+            </p>
+            <p>
+                <span class="text-right"><span class="text-italicf"><strong>Fonte:</strong> http://blog.kanitz.co.br/robo-vida/ (Adaptado por Valéria Silva Rosa de Almeida)</span></span>
+            </p>
+        </div>
+        <p>
+            Após ler o artigo, vamos separar as <strong>ideias primárias das secundárias</strong>. Todo texto argumentativo,
+            geralmente apresenta <strong>um fato</strong> (assunto), <strong>uma tese</strong> (posições defendidas pelo autor ou outras pessoas
+            sobre o tema em questão), <strong>argumentos</strong> (para defender o ponto de vista tanto do autor como de outras
+            pessoas (se houver) e <strong>conclusão.</strong>
+        </p>
+        <p>
+            Colocando na prática e veja como ficaria um resumo do artigo “ A Era do Robô”:
+        </p>
+        <div class="small-frameg">
+            <p>
+                Stephen Kanitz inicia o artigo “A era do robô” apontando o fato <strong>(fato - assunto)</strong>
+                de que, futuramente, os robôs farão todas as atividades humanas. Segundo o
+                autor, <strong>(tese de outras pessoas com argumento)</strong> há aqueles que acreditam
+                que será um horror porque ninguém terá o que fazer. No entanto, Kanitz <strong>(tese
+                do autor com argumentos)</strong> defende que para quem se preparar corretamente,
+                não haverá problemas, pois essas pessoas terão mais tempo de desfrutar
+                outras atividades mais interessantes. Para ele, o grande problema será a
+                transposição da era atual para aquela do robô, já em andamento. Por essa
+                razão, o escritor afirma que a fabricação de robôs desempregará cada vez
+                mais pessoas. Diante dessas considerações, Kanitz (conclusão) conclui
+                que o problema mundial não é econômico, mas a maneira de encarar a vida.
+                Segundo o autor do artigo, precisa-se convencer esses países para curtir
+                mais a vida, como fazem os brasileiros. Dessa forma, ele está convencido
+                que os brasileiros estão mais preparados para essas mudanças do que os
+                orientais e anglo-saxões.
+            </p>
+        </div>
+        <p>
+            Verifique quais as informações (ideias primárias) o autor selecionou para produzir o resumo. Para isso,
+            procure responder as questões que aparecem clicando nos títulos a seguir.
+        </p>
+        <!-- Accordions -->
+        <div class="accordion-container-diferente">
+            <!-- Primeiro Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    FATO
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        <strong>▸ Qual o assunto do texto?</strong><br><br>
+                        No final do próximo século, os robôs farão praticamente tudo.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Segundo Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    TESE DE OUTRAS PESSOAS
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        <strong>▸ O que outras pessoas acham a respeito do fato?</strong><br><br>
+                        Alguns dizem que será um horror porque ninguém terá nada para fazer.
+                    </p>
+                </div>
+            </div>
+            <!-- terceiro Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    TESE DO AUTOR
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        <strong>▸ O que o autor defende a respeito do fato?</strong><br><br>
+                        <strong>1)</strong> Será muito bom para quem se preparar adequadamente.<br>
+                        <strong>2)</strong> Será díficil para quem não se preparar.
+
+                    </p>
+                </div>
+            </div>
+            <!-- Quarto Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    ARGUMENTOS
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        <strong>▸ O que outras pessoas acham a respeito do fato?</strong><br><br>
+                        <strong>1)</strong> “Poderemos nos devotar a atividades muito mais interessantes como a leitura, pesquisas,
+                        cursos”.<br>
+                        <strong>2)</strong> “O grande problema não será a vida sem trabalho, mas a transição da era atual para a do
+                        robô. Poucas pessoas percebem essa transformação que não acontece em poucos dias, mas
+                        demora décadas.<br>
+                        <strong>3)</strong> Com a produção de robôs, muitos brasileiros ficarão desempregados.
+                    </p>
+                </div>
+            </div>
+            <!-- Quinto Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    CONCLUSÃO
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        <strong>▸ Qual a conclusão do autor em relação à discussão?</strong><br><br>
+                        Ele conclui que não é a economia do país que é um problema, mas o modo de viver. Os países
+                        desenvolvidos precisam relaxar, trabalhar menos, curtir a vida com a família. Nesse quesito,
+                        estamos bem mais preparados para a era do robô do que os anglo-saxões e os orientais.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seção Saiba Mais - Retângulo de Fundo -->
+    <section class="background-section">
+        <!-- Círculo Verde -->
+        <div class="circle-green">
+            <!-- Círculo Branco com ícone -->
+            <div class="circle-white">
+                <i class='bx bx-book-reader'></i>
+            </div>
+        </div>
+        <div class="transparent-section">
+            <h1 class="learn-more-title">SAIBA MAIS</h1>
+            <p class="learn-more-paragraph">
+                <strong>Organize seu aprendizado com resumos eficientes!</strong><br><br>
+                Saiba como estruturar resumos que facilitam a compreensão e memorização dos
+                conteúdos. Ideal para otimizar seu tempo de estudo e melhorar o desempenho acadêmico.
+            </p>
+            <!-- Ícone de Play -->
+            <div class="play-icon" data-video="https://www.youtube.com/embed/EejHA512AuM?si=ogvmZRlyKNEBwlet"
+                onclick="openVideoModal(this)">
+                <i class='bx bx-play-circle'></i>
+            </div>
+        </div>
+        <!-- Modal com o vídeo -->
+        <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+            <div class="video-content" onclick="event.stopPropagation()">
+                <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+        <section id="secao3" class="secao1">
+            <h1>
+                3. TIPOS DE RESUMO
+            </h1>
+            <p>
+                Referindo-se à esfera de circulação (jornalística, acadêmica entre outras) do texto e as condições de
+                produção, nem todos os resumos têm as mesmas características. Os textos originais se modificam perante
+                a situação de produção e sua intenção comunicativa. A linguagem também sofre alterações em razão
+                dessas particularidades. Antes da <strong>produção de um resumo, você precisa saber a que ele se destina
+                e como deve ser feito.</strong> Você irá <strong>encontrar resumos</strong> como parte de uma monografia, de um livro, de um
+                capítulo de um livro, de um artigo científico, de uma pesquisa, em revistas com assuntos especializados,
+                em manuais de empresas, em boletins bibliográficos etc.
+            </p>
+            <div class="container-box">
+                <div class="content">
+                    <p class="textimg">
+                        O <strong>resumo se modifica</strong> dependendo do
+                        contexto em que está inserido e de acordo
+                        com as <strong>intenções do produtor (você)</strong>
+                        em decorrência do pedido do <strong>emissor
+                        (o professor), na esfera acadêmica.</strong>
+                        Portanto, trabalharemos nessa unidade
+                        o que se considera como um <strong>RESUMO
+                        ACADÊMICO.</strong><br><br>
+                        Enfim, na prática acadêmica, a atividade
+                        de resumir é frequentemente solicitada
+                        pelos professores de Ensino Superior
+                        que propõem a produção de resumos de
+                        textos e artigos em circulação no contexto
+                        universitário.
+                    </p>
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1741956087/xsp12ygw7ou1lttfttjx.jpg"
+                        alt="Imagem representativa">
+                </div><br>
+                <p><span class="description"><strong>Descrição da imagem:</strong> A imagem mostra um grupo de quatro jovens sentados lado a lado em uma sala de
+                aula. Todos estão concentrados, escrevendo em folhas de papel, sugerindo que estão realizando uma atividade
+                como uma prova ou exercício. No primeiro plano, um jovem com barba está focado no que escreve. Ao centro,
+                uma jovem loira com blusa azul, também escreve atentamente, enquanto os outros dois jovens ao fundo mantêm
+                a mesma postura de concentração.</span>
+                </p>
+                <p><span class="description"><strong>Fonte:</strong> 123RF</span></p>
+            </div>
+            <p>
+                Quanto à função, vemos que o <strong>resumo</strong> no contexto <strong>acadêmico</strong> serve tanto ao <strong>aluno,</strong> como eficiente
+                instrumento de estudo dos inúmeros textos teóricos e científicos que tem que ler, quanto ao <strong>professor,</strong>
+                como instrumento de avaliação que permite verificar a compreensão global do texto lido.
+            </p>
+            <p>
+                Geralmente, existem 3 (três) tipos de resumos.
+            </p>
+            <h1>
+                3.1. O RESUMO INFORMATIVO
+            </h1>
+            <p>
+                O resumo informativo tem como principais características:
+            </p>
+            <div class="topico-texto">
+                <ul>
+                    <li><span class="topico-destaque"><strong>▸</strong> Apresentação de mais momentos como assunto (fato); tese de outras pessoas com argumentos; tese do próprio autor com argumentos; conclusão.</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Dispensa a leitura do texto original, para conhecimento de seus pontos básicos, pois é um resumo bem mais completo, mais detalhado.</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Apresenta várias formas de mencionar o autor com seus atos de atribuição e também os conectivos (ORGANIZADORES TEXTUAIS) utilizados na construção de um resumo coeso e coerente.</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Adequado para noticiar artigos, pesquisas científicas, textos acadêmicos, obras literárias, didáticas; relatórios.</span>
+                    </li>
+                    <li><span class="topico-destaque"><span class="text-red">É esse o tipo de RESUMO que você, aluno(a) deverá usar.</span></span>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                O resumo do artigo original escrito por Stephen Kanitz que você leu no tópico 2, é denominado também
+                de <span class="text-red">RESUMO INFORMATIVO, usado no MEIO ACADÊMICO.</span> Ele identifica as informações essenciais
+                do artigo, isto é, as ideias primárias para construir um bom resumo, “apagando” as ideias secundárias,
+                irrelevantes.
+            </p>
+            <p>
+                Portanto, <strong>para você compreender melhor,</strong> coloco outro texto com o <span class="text-red">resumo</span> (informativo) <span class="text-red">acadêmico</span>
+                com mais especificidades (mais completo) que compreenderá, além das <strong>ideias primárias.</strong>
+            </p>
+            <div class="topico-texto">
+                <ul>
+                    <li><span class="topico-destaque"><strong>▸ A MENÇÃO AO AUTOR</strong> (nesse caso à autora) e</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸ ÀS ATRIBUIÇÕES DE ATOS DO AUTOR</strong> (a)</span>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                Leia, primeiro, o texto original <strong>Cotas: o justo e o injusto</strong> escrito por Lya Luft.
+            </p>
+            <div class="small-frame">
+                <h4>Cotas: o justo e o injusto</h4>
+                <p>
+                    O medo do diferente causa conflitos por toda parte, em circunstâncias mais variadas. Alguns
+                    são embates espantosos, outros mal entendido sutis, mas em tudo existe sofrimento, maldade
+                    explícita ou silenciosa perfídia, mágoa, frustração e injustiça.
+                </p>
+                <p>
+                    Neste nosso país, muito se fala em uma questão que estimula tristemente a diferença racial
+                    e social: as cotas de ingresso em universidades para estudantes negros e/ou saídos de
+                    escolas públicas. O tema libera muita verborragia populista e burra, produz frustração e
+                    hostilidade. Instiga o preconceito racial e social. Todas as “bondades” dirigidas aos integrantes
+                    de alguma minoria, seja de gênero, raça ou condição social, realçam o fato de que eles
+                    estão em desvantagem, precisam desse destaque especial porque, devido a algum fator
+                    mencionado acima e mesmo de escolaridade ou outros, não estão no desejado patamar de
+                    autonomia e valorização. Que pena.
+                </p>
+                <p>
+                    Nas universidades inicia-se a batalha pelas cotas. Alunos que se saíram bem no vestibular
+                    são rejeitados em troca de quem se saiu menos bem, mas é de origem africana ou vem de
+                    escola pública. E os <strong>outros?</strong> Os <strong>pobres brancos,</strong> os remediados de origem portuguesa,
+                    italiana, polonesa, alemã, ou o que for, cujos pais lutaram duramente para lhes dar casa,
+                    saúde, educação?
+                </p>
+                <p>
+                    A ideia das cotas reforça dois conceitos nefastos: o de que negros são menos capazes, e por
+                    isso precisam desse empurrão, e o de que a escola pública é péssima e não tem salvação.
+                    Teremos agora famílias brancas e pobres para as quais perderá o sentido lutar para que
+                    seus filhos tenham boa escolaridade e consigam entrar numa universidade, porque o lugar
+                    deles será dado a outro.
+                </p>
+                <p>
+                    Nem todos os envolvidos nessa nova lei discriminatória e injusta são responsáveis por
+                    isso. Os alunos beneficiados têm todo o direito de reivindicar uma possibilidade que se
+                    lhes oferece. Mas o triste é serem massa de manobra para um populismo interesseiro,
+                    vítimas de desinformação e de visão estreita, que os deixa em má posição. Não entram na
+                    universidade por mérito próprio, pessoal e pelo apoio da família, mas pelo que o governo
+                    considera deficiência: a raça ou a escola de onde vieram – esta, aliás, oferecida pelo próprio
+                    governo.
+                </p>
+                <p>
+                    Lamento essa trapalhada que prejudica a todos: os que são oficialmente considerados menos
+                    capacitados, e por isso recebem o pirulito do favorecimento, e os que ficam chupando o dedo
+                    da frustração, não importando os anos de estudo, a batalha dos pais e seu mérito pessoal.
+                </p>
+                <p><strong>Fonte</strong>: http://veja.abril.com.br/060208/ponto_de_vista.shtml<br>
+                    (Adaptado por Valéria Silva Rosa de Almeida)</p>
+            </div>
+            <p>
+                Sempre que vamos produzir um texto na universidade ou em qualquer outro ambiente, devemos situar
+                o leitor. Sabemos que um <strong>resumo</strong> é um texto construído a partir de outro texto (o original). Em razão da
+                ética acadêmica, devemos dar <strong>crédito</strong> ao autor, do texto original, mencionando-o <strong>(MENÇÃO AO AUTOR)</strong>,
+                e utilizando <strong>verbos (atos) (ATRIBUIÇÕES DE ATOS DO AUTOR)</strong> adequados aos argumentos dele, no
+                momento de produção do resumo.
+            </p>
+            <div class="topico-texto">
+                <ul>
+                    <li><span class="topico-destaque"><strong>▸ MENÇÃO AO AUTOR (cor <span class="text-blue">AZUL</span>)</strong></span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸ AS ATRIBUIÇÕES DE ATOS DO AUTOR (cor <span class="text-red">VERMELHA</span>)</strong></span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸ ORGANIZADORES TEXTUAIS (cor <span class="text-green">VERDE ESCURO</span>)</strong></span>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                Leia cuidadosamente o <strong>modelo do resumo</strong> prestando atenção nas cores:
+            </p>
+            <div class="small-frame">
+                <p>
+                    <span class="text-blue">Lya Luft</span> <span class="text-red">inicia</span> o artigo <strong>Cotas: o justo e o injusto</strong> <span class="text-red">apontando</span> o fato de que muito se
+                    tem discutido sobre as cotas de estudantes negros/ou vindos de escolas públicas para o
+                    ingresso em universidades <strong>(FATO)</strong>. <span class="text-greenv">Diante disso</span>, <span class="text-blue">ela</span> <span class="text-red">defende</span> que esse processo gerado
+                    pelo governo estimula o preconceito racial e social <strong>(TESE)</strong>.
+                </p>
+                <p>
+                    <span class="text-greenv">Inicialmente</span>, <span class="text-blue">a autora</span> <span class="text-red">considera</span> que qualquer benefício direcionado a uma minoria
+                    evidencia que os menos favorecidos estão em desvantagem relacionada ao estudo no Ensino
+                    Superior. <span class="text-greenv">Em seguida</span>, <span class="text-blue">ela</span> <span class="text-red">afirma</span> que os estudantes que obtiveram bom desempenho nos
+                    vestibulares perdem suas vagas para aqueles que se utilizam desse processo. <span class="text-greenv">Além disso</span>,
+                    <span class="text-blue">a escritora</span> <span class="text-red">aponta</span> que a proposta de cotas sugere que os negros são menos capazes e
+                    que a escola pública é de má qualidade. <strong>(ARGUMENTOS)</strong>.
+                </p>
+                <p>
+                    <span class="text-greenv"></span>Diante dessas considerações, <span class="text-blue">Luft</span> <span class="text-red">lamenta</span> tanto esse favorecimento pelas cotas, quanto a
+                    deplorável situação que se encontra o sistema educacional público brasileiro <strong>(CONCLUSÃO)</strong>.
+                </p>
+            </div>
+            <p>
+                A partir do resumo apresentado acima, podemos notar que a cada ideia finalizada (cada ponto final), a
+                autora do texto foi mencionada de diferentes formas:
+            </p>
+            <div class="topico-texto">
+                <ul>
+                    <li><span class="topico-destaque"><strong>▸</strong> Nome completo da autora do texto original no início do resumo.</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Sobrenome da autora algumas vezes (<strong>NUNCA O PRIMEIRO NOME APENAS</strong>).</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Expressões como “a autora”, “a escritora”.</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Pronomes que se refiram à autora >>> “ela”, “dela”.</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> A profissão ou o que a autora faz.</span>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                Dependendo da pessoa que escreve o texto original, faz-se necessário saber a profissão dela: arquiteto
+                (a), engenheiro (a), professor (a), sociólogo (a), geólogo (a) entre outras.
+            </p>
+            <p>
+                Toda vez que você ler o texto de um determinado autor e citar o que foi lido, não deixe de fazer a referência
+                a ele; é uma questão ética e dará credibilidade ao seu texto.
+            </p>
+            <p>
+                Verifique também como <strong>apresentar</strong> os atos do autor <strong>adequadamente</strong>. Atos são os verbos. Aqui estamos
+                nos referindo apenas aos verbos <strong>que dizem respeito ao AUTOR DO TEXTO ORIGINAL</strong>, não todos os
+                verbos que você pode usar durante a escrita.
+            </p>
+            <p>
+                O autor do resumo utiliza de verbos que indicam o que o autor do texto original está argumentando,
+                explicando, concluindo etc.
+            </p>
+            <!-- Acordeons -->
+            <div class="acordeon-container">
+                <!-- Primeiro acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        LISTA DE VERBOS QUE VOCÊ PODE USAR
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+            
+                    <div class="acordeon-content">
+                        <p>
+                            esclarecer // iniciar // afirmar // descrever // apontar // justificar // objetivar // questionar //
+                            explicar // classificar // acreditar // tratar // expor // enfatizar // lamentar // citar // ressaltar //
+                            defender // argumentar // apresentar // confrontar // enumerar // elencar // convidar //
+                            concluir // referenciar
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h1>
+                3.2. O RESUMO INDICATIVO
+            </h1>
+            <p>
+                O resumo indicativo tem como principais características:
+            </p>
+            <div class="topico-texto">
+                <ul>
+                    <li><span class="topico-destaque"><strong>▸</strong> Apresentação do conteúdo (fato ou assunto).</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Resume as principais ideias do texto original.</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Não dispensa a leitura do texto original, para conhecimento de seus pontos básicos.</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Descreve apenas a natureza, a forma e o propósito do ato de escrever.</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Menciona, às vezes, o autor do texto original antes ou depois da apresentação do resumo e algumas poucas atribuições de atos (verbos) do autor.</span>
+                    </li>
+                    <li><span class="topico-destaque"><strong>▸</strong> Adequado para prospectos, catálogos e produtos industriais e comerciais.</span>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                A seguir, um exemplo de resumo indicativo.
+            </p>
+            <div class="small-frame">
+                <p>
+                    Estudo realizado sobre as redações de vestibulandos da FUVEST que examina os textos
+                    com base nas novas tendências dos estudos de linguagem, que buscam erigir uma gramática
+                    do texto, uma teoria do texto. São objetos do estudo a coesão, o clichê, a frase feita, o “não
+                    texto” e o discurso indefinido. Ele parte de conjecturas e indagações; apresenta os critérios
+                    para análise, o candidato e farta explicação.
+                </p>
+                <p>
+                    <span class="text-right"><span class="text-italicf">ROCCO, Maria Thereza Fraga. Crise na linguagem: a redação no vestibular. São Paulo: Mestre Jou, 1981, 184p.</span></span>
+                </p>
+            </div>
+            <h1>
+                3.3. O RESUMO CRÍTICO OU RESENHA
+            </h1>
+            <p>
+                O resumo crítico, chamado também de resenha, apresenta as mesmas características de um resumo
+                acadêmico, porém devem ser acrescentadas críticas (juízos de valor) em relação à maneira que o autor
+                do texto original passa as ideias ao leitor.
+            </p>
+        </section>
+        <section id="secao4" class="secao2">
+            <h1>
+                4. SUGESTÕES PARA A PRODUÇÃO DE UM BOM RESUMO
+            </h1>
+            <p>
+                Como sempre, devo avisá-los que não existe uma “receita pronta”, mas essas sugestões irão auxiliá-los
+                na <strong>produção de um bom resumo</strong> e, principalmente, em <strong>como iniciá-lo</strong>, etapa sempre duvidosa.
+            </p>
+            <p>
+                <strong>O USO DE UM PROCEDIMENTO APROPRIADO PODE DIMINUIR AS DIFICULDADES DE ELABORAÇÃO
+                DE UM RESUMO. Por isso, aconselhamos as seguintes passadas:</strong>
+            </p>
+            <!-- Tabs -->
+            <div class="tabs-container2">
+                <div class="tab2" data-tab="tabb1">
+                    1
+                    <span class="icon-wrapper">
+                        <i class="fas fa-hand-pointer"></i>
+                    </span>
+                </div>
+                <div class="tab2" data-tab="tabb2">
+                    2
+                    <span class="icon-wrapper">
+                        <i class="fas fa-hand-pointer"></i>
+                    </span>
+                </div>
+                <div class="tab2" data-tab="tabb3">
+                    3
+                    <span class="icon-wrapper">
+                        <i class="fas fa-hand-pointer"></i>
+                    </span>
+                </div>
+                <div class="tab2" data-tab="tabb4">
+                    4
+                    <span class="icon-wrapper">
+                        <i class="fas fa-hand-pointer"></i>
+                    </span>
+                </div>
+            </div>
+            <!-- Conteúdo dos Tabs -->
+            <div class="tab-content2" id="tabb1">
+                <p>
+                    Ler uma vez o texto
+                    ininterruptamente, do
+                    começo ao fim, com
+                    a preocupação de
+                    responder à seguinte
+                    pergunta: <strong>Do que
+                    trata o texto?</strong>
+                </p>
+            </div>
+            <div class="tab-content2" id="tabb2" style="display: none;">
+                <p>
+                    Fazer uma segunda
+                    leitura, com
+                    interrupções, com
+                    marcadores de
+                    texto ou lápis para
+                    assinalar, identificar
+                    e compreender
+                    melhor o significado
+                    de palavras difíceis
+                    (ou desconhecidas - Use o dicionário
+                    se precisar), captar
+                    o sentido de frases
+                    complexas (longas,
+                    com inversões, com
+                    elementos ocultos),
+                    compreender bem
+                    o sentido das
+                    palavras relacionais,
+                    responsáveis pelo
+                    estabelecimento das
+                    conexões (isto, isso,
+                    aquilo, aqui, lá, seu,
+                    sua, ele, ela etc) e
+                    os organizadores
+                    textuais (mas,
+                    embora, ainda que,
+                    além disso etc),
+                    verificar também,
+                    as partes do texto
+                    e identificar o
+                    tema, problema,
+                    tese, argumentos,
+                    conclusão).
+                </p>
+            </div>
+            <div class="tab-content2" id="tabb3" style="display: none;">
+                <p>
+                    Num terceiro
+                    momento, tentar fazer
+                    uma segmentação
+                    do texto em blocos
+                    de ideias que tenham
+                    alguma unidade
+                    de sentido. Pode
+                    se adotar como
+                    primeiro critério
+                    de segmentação
+                    a divisão em
+                    parágrafos (texto
+                    pequeno). Quando
+                    se tratar de um texto
+                    maior (capítulo de um
+                    livro, por exemplo) é
+                    conveniente adotar
+                    um critério de seleção
+                    mais funcional
+                    (oposições de tempo
+                    e espaço etc).
+                </p>
+            </div>
+            <div class="tab-content2" id="tabb4" style="display: none;">
+                <p>
+                    Dar uma redação
+                    final com suas
+                    palavras, procurando
+                    não só condensar
+                    os segmentos, mas
+                    encadeá-los na
+                    progressão em que
+                    se sucedem no texto
+                    e estabelecer as
+                    relações entre eles.
+                </p>
+            </div>
+            <p>
+                Portanto, RESUMIR significa apresentar, com suas próprias palavras, as partes essenciais de um texto.
+            </p>
+        </section>
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    <strong>Maximize seu tempo com resumos ágeis e bem estruturados!</strong><br><br>
+                    Este vídeo apresenta métodos para criar resumos rápidos e eficientes, otimizando
+                    seu processo de estudo e melhorando sua assimilação de conteúdo.
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/5Pr09JVPQfY?si=Zc65MVnN6u90ZuLy"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <section id="secao2" class="secao2">
+            <!-- Quadro com borda violeta -->
+            <h2 class="titulo-quadrov"><span class="text-green">Figura 1.</span> ORIENTAÇÕES PRÁTICAS</h2>
+            <div class="quadrov">
+                <!-- Imagem via link -->
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1741978278/wq1tj6kvmvfkzuxvjest.png"
+                    alt="Descrição da imagem" class="imagem-quadrov" onclick="openModal(this)">
+                <!-- Fonte da imagem -->
+            <p><span class="text-italicf"><strong>Fonte:</strong> USF, 2025.</span></p>
+            </div>
+            <!-- Modal para exibir a imagem ampliada -->
+            <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImg">
+            </div>
+            <p>
+                As técnicas aqui apresentadas, um tanto teóricas, são apenas <strong>instrumentos facilitadores</strong> para as tarefas
+                de ler e resumir. <strong>Jamais</strong> suprirão a <strong>falta de estudo</strong> e a <strong>prática da leitura.</strong> <strong>O estudo é o único meio de
+                solucionar os problemas relacionados à leitura e à produção de resumos.</strong>
+            </p>
+        </section>
+        <!-- Seção Conclusão -->
+        <section id="conclusao" class="conclusao">
+            <!-- Conteúdo -->
+            <div class="conteudo-conclusao">
+                <div class="caixa-texto">
+                    <h1 class="titulo-conclusao">CONCLUSÃO</h1>
+                    <p>
+                        A elaboração de um bom resumo acadêmico exige compreensão aprofundada do texto original e a aplicação
+                        de estratégias de seleção e construção das informações. Esse processo permite que o estudante organize
+                        suas ideias de maneira lógica e eficaz, facilitando a assimilação do conteúdo estudado.
+                    </p>
+                    <p>
+                        Ao dominar a técnica de resumir, você será capaz de aprimorar suas habilidades de leitura e escrita, além
+                        de tornar o estudo mais produtivo e eficiente. Lembre-se de que a prática contínua é fundamental para o
+                        desenvolvimento dessa competência essencial no meio acadêmico.
+                    </p>
+                    
+                </div>
+            </div>
+            <div id="download" class="download-section">
+                <a href="" class="download-btn">
+                    Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+                </a>
+            </div>
+        </section>
+        <!-- Seção Referências-->
+        <section id="referencias" class="referencias">
+            <div class="conteudo-referencias">
+                <div class="caixa-texto">
+                    <h1 class="titulo-referencias">REFERÊNCIAS</h1>
+                    <p>
+                        BRONCKART, Jean-Paul. <strong>Atividades de linguagem, textos e discursos</strong>: por um interacionismo
+                        sociodiscursivo. Trad. Anna Rachel Machado e Péricles Cunha. 2.ed. São Paulo: EDUC, 2007.
+                    </p>
+                    <p>
+                        DIDIO, Lucie. <strong>Leitura e Produção de Textos</strong>: comunicar melhor, pensar melhor, ler melhor, escrever
+                        melhor. São Paulo: Atlas, 2013.
+                    </p>
+                    <p>
+                        DOLZ, Joaquim; SCHNEUWLY, Bernard; NOVERRAZ, Michèle. Sequencias didáticas para o oral e a
+                        escrita: apresentação de um procedimento. In: SCHNEUWLY, Bernard; DOLZ, Joaquim. <strong>Gêneros orais
+                        e escritos na escola.</strong> Campinas: Mercado de Letras: 2010.
+                    </p>
+                    <p>
+                        MACHADO, Anna Rachel; LOUSADA, Eliane; ABREU-TARDELLI, Lília Santos. <strong>Resumo</strong>. São Paulo:
+                        Parábola Editorial, 2004.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>Copyright © de Universidade São Francisco</p>
+            <hr class="footer-divider">
+            <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+                qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+                gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+                expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+        </footer>
+<script>
+    // Navbar
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            const menu = document.querySelector('.navbar ul');
+            const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+            menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+            // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+            icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+            icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+        });
+        // Fechar o menu ao clicar em um link
+        const links = document.querySelectorAll('.navbar ul li a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.querySelector('.navbar ul');
+                const icons = document.querySelectorAll('.menu-toggle i');
+
+                // Fecha o menu ao clicar no link
+                menu.classList.remove('show');
+                icons[0].style.display = 'block'; // Exibe o ícone de menu
+                icons[1].style.display = 'none'; // Esconde o ícone de fechar
+            });
+        });
+        // Captura o elemento navbar
+        const navbar = document.querySelector('.navbar');
+
+        // Função que altera a opacidade da navbar
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                navbar.style.backgroundColor = 'rgba(159, 67, 190, 0.8)'; // Opacidade 80%
+            } else {
+                navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
+            }
+        });
+    // Script para funcionalidade dos Tabs da nova seção (tabs-container2)
+        document.querySelectorAll('.tab2').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetId = tab.getAttribute('data-tab');
+
+                // Remove o conteúdo visível de todos os Tabs dentro da nova seção
+                document.querySelectorAll('.tab-content2').forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                // Mostra o conteúdo do Tab clicado
+                document.getElementById(targetId).style.display = 'block';
+
+                // Remove a classe 'active' de todos os Tabs dentro da nova seção
+                document.querySelectorAll('.tab2').forEach(t => {
+                    t.classList.remove('active');
+                });
+
+                // Adiciona a classe 'active' ao Tab clicado
+                tab.classList.add('active');
+            });
+        });
+    // Script para funcionalidade do acordeon
+        document.querySelectorAll('.acordeon-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const isVisible = content.style.display === 'block';
+
+                // Apenas abre ou fecha o acordeon clicado
+                content.style.display = isVisible ? 'none' : 'block';
+
+                // Alternar a classe da seta
+                const icon = header.querySelector('.acordeon-icon');
+                if (icon) {
+                    icon.classList.toggle('bx-chevron-up', !isVisible); // Seta para cima
+                    icon.classList.toggle('bx-chevron-down', isVisible); // Seta para baixo
+                }
+            });
+        });
+        // Script para funcionalidade do novo accordion
+        document.querySelectorAll('.accordion-header-diferente').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const isVisible = content.style.display === 'block';
+
+                // Apenas abre ou fecha o accordion clicado
+                content.style.display = isVisible ? 'none' : 'block';
+
+                // Alternar a classe da seta
+                const icon = header.querySelector('.accordion-icon-diferente');
+                if (icon) {
+                    icon.classList.toggle('bx-chevron-up', !isVisible); // Seta para cima
+                    icon.classList.toggle('bx-chevron-down', isVisible); // Seta para baixo
+                }
+            });
+        });
+
+    function initializeSlider(sliderSelector) {
+            const sliderContainer = document.querySelector(sliderSelector);
+            const slider = sliderContainer.querySelector('.slider');
+            const slides = sliderContainer.querySelectorAll('.slide');
+            const leftArrow = sliderContainer.querySelector('.left-arrow');
+            const rightArrow = sliderContainer.querySelector('.right-arrow');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                const totalSlides = slides.length;
+
+                if (index < 0) {
+                    currentIndex = totalSlides - 1;
+                } else if (index >= totalSlides) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = index;
+                }
+
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            leftArrow.addEventListener('click', () => showSlide(currentIndex - 1));
+            rightArrow.addEventListener('click', () => showSlide(currentIndex + 1));
+
+            // Inicializa o slider
+            showSlide(currentIndex);
+        }
+
+        // Exemplo de inicialização de sliders
+        initializeSlider('.slider-container'); // Slider 1
+        initializeSlider('.slider-container-2'); // Slider 2  
+        
+        // Função para abrir o modal com o vídeo
+            function openVideoModal(element) {
+                var videoModal = document.getElementById('videoModal');
+                var iframe = document.getElementById('videoIframe');
+
+                // Obtém o link do vídeo do atributo 'data-video' do ícone de play clicado
+                var videoLink = element.getAttribute("data-video");
+
+                // Define o src do iframe com o link do vídeo
+                iframe.src = videoLink;
+
+                // Exibe o modal
+                videoModal.style.display = "flex";
+            }
+
+            // Função para fechar o modal
+            function closeVideoModal() {
+                var videoModal = document.getElementById('videoModal');
+                var iframe = document.getElementById('videoIframe');
+
+                // Limpa o vídeo (remove a URL para evitar que o vídeo continue tocando)
+                iframe.src = "";
+                videoModal.style.display = "none";  // Fecha o modal
+            }
+
+            // Impede o fechamento do modal quando o clique for dentro do modal de vídeo
+            document.getElementById('videoModal').addEventListener('click', function (event) {
+                // Apenas fecha o modal se o clique for fora da área de conteúdo (ou seja, na área preta)
+                if (event.target === this) {
+                    closeVideoModal();
+                }
+            });
+            // Abrir modal ao clicar na imagem
+                function openModal(imgElement) {
+                    let modal = document.getElementById("imageModal");
+                    let modalImg = document.getElementById("modalImg");
+
+                    modal.style.display = "flex";
+                    modalImg.src = imgElement.src;
+                }
+
+                // Fechar modal ao clicar no fundo ou no botão "X"
+                function closeModal() {
+                    document.getElementById("imageModal").style.display = "none";
+                }
+</script>    
+</body>
+</html>
