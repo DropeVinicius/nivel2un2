@@ -455,7 +455,6 @@
             margin: 0; /* Remove a margem herdada */
             width: 100%; /* Faz o texto ocupar todo o espaço disponível */
         }
-
         /* Layout da imagem + texto */
         .content {
             display: flex;
@@ -463,7 +462,22 @@
             justify-content: space-between;
             gap: 20px; /* Espaço entre os elementos */
         }
+                        /* Garantir que a fonte fique abaixo da imagem */
+        .imagem-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza a imagem e a fonte */
+        }
 
+        /* Ajustar a posição da fonte abaixo da imagem */
+        .fonte-imagem {
+            font-size: 12px !important;
+            color: #555;
+            text-align: center;
+            margin-top: 5px; /* Pequeno espaçamento entre a imagem e a fonte */
+            display: block;
+        }
+    
         /* Imagem */
         .content img {
             width: 350px; /* Ajuste do tamanho da imagem */
@@ -484,10 +498,10 @@
 
         /* Descrição abaixo da imagem */
         .description {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            margin-top: 10px;
-            text-align: justify; /* Melhor alinhamento */
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 14px !important;
+            margin-top: 10px !important;
+            text-align: justify !important; /* Melhor alinhamento */
         }
 
         /* 🔹 Responsividade 🔹 */
@@ -1755,21 +1769,26 @@
         <div class="container-box">
             <div class="content">
                 <p class="textimg">
-                    <strong>O resumo é um gênero bastante utilizado no meio acadêmico</strong> e, por isso, saber produzir um bom resumo é
+                    <strong>O resumo é um gênero bastante utilizado no meio acadêmico</strong> e, por isso, saber produzir um
+                    bom resumo é
                     fundamental. Ao estudar para uma prova teórica em que algumas questões devem
                     ser respondidas, você estará resumindo o conteúdo que o professor passou, seja
                     em aulas teóricas ou em capítulos, livros que este pediu para ler.
                 </p>
-                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1741719325/xt5oo9eyduzavidwqig3.jpg"
-                    alt="Imagem representativa">
+                <div class="imagem-wrapper">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1741719325/xt5oo9eyduzavidwqig3.jpg"
+                        alt="Imagem representativa">
+                    <p class="fonte-imagem"><strong>Fonte:</strong> 123RF</p>
+                </div>
             </div>
-            <p><span class="description"><strong>Descrição da imagem:</strong> A imagem mostra uma jovem de cabelos escuros,
-                    blusa azul, estudando em um ambiente
-                    iluminado, sentada em uma mesa com diversos livros coloridos empilhados ao lado. Ela está concentrada
-                    escrevendo em um caderno aberto, usando uma caneta verde. Na mesa, há também um teclado de computador,
-                    um mouse e uma calculadora.</span>
+            <br>
+            <p class="description"><strong>Descrição da imagem:</strong> A imagem mostra uma jovem de cabelos escuros,
+                blusa azul, estudando em um ambiente iluminado, sentada em uma mesa com diversos livros coloridos empilhados ao
+                lado.
+                Ela está concentrada escrevendo em um caderno aberto, usando uma caneta verde. Na mesa, há também um teclado de
+                computador,
+                um mouse e uma calculadora.
             </p>
-            <p><span class="description"><strong>Fonte:</strong> 123RF</span></p>
         </div>
         <p>
             O resumo permitirá a você perceber se compreendeu o que foi lido, pois irá recuperar as ideias, conceitos,
@@ -2263,10 +2282,10 @@
                         contexto em que está inserido e de acordo
                         com as <strong>intenções do produtor (você)</strong>
                         em decorrência do pedido do <strong>emissor
-                        (o professor), na esfera acadêmica.</strong>
+                            (o professor), na esfera acadêmica.</strong>
                         Portanto, trabalharemos nessa unidade
                         o que se considera como um <strong>RESUMO
-                        ACADÊMICO.</strong><br><br>
+                            ACADÊMICO.</strong><br><br>
                         Enfim, na prática acadêmica, a atividade
                         de resumir é frequentemente solicitada
                         pelos professores de Ensino Superior
@@ -2274,16 +2293,24 @@
                         textos e artigos em circulação no contexto
                         universitário.
                     </p>
-                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1741956087/xsp12ygw7ou1lttfttjx.jpg"
-                        alt="Imagem representativa">
-                </div><br>
-                <p><span class="description"><strong>Descrição da imagem:</strong> A imagem mostra um grupo de quatro jovens sentados lado a lado em uma sala de
-                aula. Todos estão concentrados, escrevendo em folhas de papel, sugerindo que estão realizando uma atividade
-                como uma prova ou exercício. No primeiro plano, um jovem com barba está focado no que escreve. Ao centro,
-                uma jovem loira com blusa azul, também escreve atentamente, enquanto os outros dois jovens ao fundo mantêm
-                a mesma postura de concentração.</span>
+            
+                    <!-- Wrapper para agrupar imagem e fonte -->
+                    <div class="imagem-wrapper">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1741956087/xsp12ygw7ou1lttfttjx.jpg"
+                            alt="Imagem representativa">
+                        <p class="fonte-imagem"><strong>Fonte:</strong> 123RF</p>
+                    </div>
+                </div>
+                <br>
+                <!-- Descrição da imagem -->
+                <p class="description">
+                    <strong>Descrição da imagem:</strong> A imagem mostra um grupo de quatro jovens sentados lado a lado em uma sala
+                    de
+                    aula. Todos estão concentrados, escrevendo em folhas de papel, sugerindo que estão realizando uma atividade
+                    como uma prova ou exercício. No primeiro plano, um jovem com barba está focado no que escreve. Ao centro,
+                    uma jovem loira com blusa azul, também escreve atentamente, enquanto os outros dois jovens ao fundo mantêm
+                    a mesma postura de concentração.
                 </p>
-                <p><span class="description"><strong>Fonte:</strong> 123RF</span></p>
             </div>
             <p>
                 Quanto à função, vemos que o <strong>resumo</strong> no contexto <strong>acadêmico</strong> serve tanto ao <strong>aluno,</strong> como eficiente
